@@ -16,23 +16,7 @@
 ### 사용 개념
 - `flask`, `flask-sqlalchemy`, `postgresql`database
 
-### 이미지
-  **1.index page**
-    ![image](https://user-images.githubusercontent.com/74661937/144897571-ffcf3218-49cb-4997-8944-fc5150850b9f.png)
-    
-  **2.login page**
-    ![image](https://user-images.githubusercontent.com/74661937/144897918-95dda760-8ddd-40de-9878-7b6f8be94d86.png)
-  
-  **3.register page**
-    ![image](https://user-images.githubusercontent.com/74661937/144898045-743245fa-fda0-42f0-9468-49b1111516e0.png)
-  
-  **4.post page**
-    ![image](https://user-images.githubusercontent.com/74661937/144898145-6c6ed03a-efe4-4c09-9306-28a7639ce579.png)
-
-  **5.list page**
-    ![image](https://user-images.githubusercontent.com/74661937/144898240-e6741f4c-7bc2-4d01-951b-43dc8f5f8071.png)
-  
-  **6.entity relationship (schema)**
-    ![image](https://user-images.githubusercontent.com/74661937/144898320-83c7cb24-cf5f-4462-81b1-68e7cb1e617b.png)
+### entity relationship (schema)
+   ![image](https://user-images.githubusercontent.com/74661937/144898320-83c7cb24-cf5f-4462-81b1-68e7cb1e617b.png)
 
 
