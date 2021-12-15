@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+
+{% block main_body %}
+<div class="container">
+
+    <h1>운동기구 별 통계</h1>
+    <meta id="my-data1" data-name="{{count1}}">
+    <div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        // Load Charts and the corechart and barchart packages.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Draw the pie chart and bar chart when Charts is loaded.
+        google.charts.setOnLoadCallback(drawChart);
+        
+        var num2 = $('#my-data1').data();
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+            ['불가리안 백', 3],
+            ['커틀벨', 4],
+            ['덤벨', 2],
+            ['바벨', 1]
+
+            ]);
+
+            var piechart_options = {title:'My workout activity',
+                        width:500,
+                        height:300};
+            var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+            piechart.draw(data, piechart_options);
+
+            var barchart_options = {title:'Weights',
+                        width:500,
+                        height:300,
+                        legend: 'none'};
+            var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+            barchart.draw(data, barchart_options);
+        }
+        </script>
+    </div>
+    <body>
+        <!--Table and divs that hold the pie charts-->
+        <table class="columns">
+        <tr>
+            <td><div id="piechart_div" style="border: 1px solid #ccc"></div></td>
+            <td><div id="barchart_div" style="margin-left: 30px; border: 1px solid #ccc"></div></td>
+        </tr>
+        </table>
+    </body>
+    </div>
+
+
+</main>
+
+<footer class="container">
+  <p></p>
+</footer>
+
+
+{% endblock %}

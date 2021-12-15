@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block main_body %}
+    <!--<form action="/posts/create">-->
+    <!--    <input type="text" name="title">-->
+    <!--    <input type="text" name="content">-->
+    <!--    <input type="submit">-->
+    <!--</form>-->
+
+    <form action="/posts/{{post.id}}/update" method="post">
+      <div class="form-group">
+        <label for="machine">Machine</label>
+        <input value="{{post.machine}}" name="machine" type="text" class="form-control" id="machine" placeholder="운동 기구 이름을 입력해주세요">
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight</label>
+        <input value="{{post.weight}}" name="weight" type="int" class="form-control" id="weight" placeholder="운동 기구 중량을 입력해주세요">
+      </div>
+      <div class="form-group">
+        <label for="num_1set">num_1set</label>
+        <input value="{{post.num_1set}}" name="num_1set" type="int" class="form-control" id="num_1set" placeholder="1세트 당 운동 횟수를 입력해주세요">
+      </div>
+      <div class="form-group">
+        <label for="total_set">total_set</label>
+        <input value="{{post.total_set}}" name="total_set" type="int" class="form-control" id="total_set" placeholder="총 운동한 세트 수를 입력해주세요">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">수정</button>
+    </form>
+
+{% endblock %} 

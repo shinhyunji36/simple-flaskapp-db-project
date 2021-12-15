@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Workout Diary
+{% endblock %}
+
+{% block lead %}
+오늘 어떤 운동을 하셨나요? <br>
+사용한 운동 기구, 중량, 횟수, 세트 개수를 등록해주세요.
+{% endblock  %}
+
+{% block main_body %}
+<form method="POST" action="/posts/create">
+    <div class='shadowbox'>
+        <label for="workouttime">Workout time (date and time):</label>
+        <input name="date" style="margin-bottom:10px" class="form-control" id="floatingInput" type="datetime-local" placeholder="">
+    </div>
+    
+    <div class='shadowbox'>
+        <label for="name">Name:</label>
+        <input name="name" style="margin-bottom:10px" class="form-control" id="floatingInput" type="text" placeholder="">
+    </div>
+
+    <div class='shadowbox'>
+        <label for="machine"> Machine:</label>
+        <input name="machine" style="margin-bottom:10px" class="form-control" id="floatingInput" type="text" placeholder="">
+    </div>
+
+    <div class='shadowbox'>
+        <label for="weight">Machine weight:</label>
+        <input name="weight" style="margin-bottom:10px" class="form-control" id="floatingInput" type="text" placeholder="">
+    </div>
+
+    <div class='shadowbox'>
+        <label for="num_1set">Num for 1set:</label>
+        <input name="num_1set" style="margin-bottom:10px" class="form-control" id="floatingInput" type="text" placeholder="">
+    </div>
+
+    <div class='shadowbox'>
+        <label for="total_set">total_set:</label>
+        <input name="total_set" style="margin-bottom:10px" class="form-control" id="floatingInput" type="text" placeholder="">
+    </div>
+    <input type="submit" class="btn btn-outline-primary btn-lg" value="Add" />
+  </form>
+
+  {% endblock %}
